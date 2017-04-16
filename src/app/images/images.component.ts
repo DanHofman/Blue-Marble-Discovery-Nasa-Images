@@ -30,31 +30,12 @@ import { GrabNasaService } from '../grab-nasa.service';
     ])
   ]
 })
-export class ImagesComponent implements OnInit, AfterContentInit, AfterViewInit, AfterContentChecked, DoCheck, OnChanges{
+export class ImagesComponent implements OnInit{
   constructor(private grabNasa: GrabNasaService) { }
 
   ngOnInit() {
     this.loadAllData();
-    console.log("first init");
   } 
-  ngAfterContentChecked() {
-    console.log("ng after content checked");
-  }
-  ngDoCheck() {
-    console.log("ng do check");
-  }
-  ngAfterViewInit() {
-    console.log("ng after view init");
-  }
-  ngAfterContentInit() {
-    console.log("ng after content init");
-  }
-  ngOnChanges() {
-    console.log("ng on changes");
-  }
-  ngAfterViewChecked() {
-    console.log("ng after view checked");
-  }
   
   @Output() sendData = new EventEmitter;
   imageInfo: Object[] = [];
