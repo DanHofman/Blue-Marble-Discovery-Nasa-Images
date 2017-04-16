@@ -28,3 +28,10 @@ h1{
         transform: rotate(360deg);
     }
 }
+
+.imageSpace, .descriptionSpace {
+    margin-top: 50px;
+}
+.descriptionSpace {
+
+}

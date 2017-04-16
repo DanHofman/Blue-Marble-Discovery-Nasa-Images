@@ -3,13 +3,14 @@
   <i class="fa fa-globe fa-4x" aria-hidden="true"></i>
 </div>
 <div class="container-fluid">
+  <hr>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 imageSpace">
       <bm-images
         (sendData) = "loadInfo($event)"
       ></bm-images>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 descriptionSpace">
       <bm-description 
       *ngIf="activeInfo"
       [activeImage]="activeInfo[0]"

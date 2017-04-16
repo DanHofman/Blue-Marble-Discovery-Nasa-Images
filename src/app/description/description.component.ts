@@ -10,6 +10,7 @@ export class DescriptionComponent implements OnChanges{
   caption: string;
   date: string;
   coordinates: string[];
+  centroidCoords: string[];
 
   ngOnChanges() {
     this.caption = this.activeImage ?  this.activeImage['caption'] : "";
