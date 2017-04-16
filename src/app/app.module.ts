@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ImagesComponent } from './images/images.component';
+import { DescriptionComponent } from './description/description.component';
+import { GrabNasaService } from './grab-nasa.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImagesComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [GrabNasaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

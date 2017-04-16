@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<div class="heading">
+  <h1> Blue Marble</h1>
+  <i class="fa fa-globe fa-4x" aria-hidden="true"></i>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <bm-images
+        (sendData) = "loadInfo($event)"
+      ></bm-images>
+    </div>
+    <div class="col-md-6">
+      <bm-description 
+      *ngIf="activeInfo"
+      [activeImage]="activeInfo[0]"
+      ></bm-description>
+    </div>
+  </div>
+</div>
+
